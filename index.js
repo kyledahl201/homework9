@@ -189,3 +189,37 @@ function promptUser() {
 
 
 }
+
+// Create function to render contributing section 
+
+function renderContributing(contributor) {
+
+        if (contributor) {
+            return "Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms. [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)"
+        } else {
+            return "Nothing."
+        }
+
+
+
+
+
+}
+
+//create function to render badges for layout 
+
+function renderBadges(badge) {
+
+    const badgeArray = badge.split(",");
+    let badgeTemplate = "";
+    for (let i = 0; i < badgeArray.length; i++) {
+
+        badgeTemplate += "![Badge](" + badgeArray[i] + ") ";
+
+    }
+    return badgeTemplate;
+    
+
+
+
+}
