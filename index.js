@@ -244,4 +244,28 @@ function createList(responseList, type) {
 
 }
 
+//axiuos call to get profile poicture of user
+
+function getPicture(username) {
+    const queryUrl = `https://api.github.com/search/users?q=${username}`;
+
+
+
+return axios 
+    .get(queryUrl)
+    .then(function (response) {
+
+        const { picture_url } = response.data.items[0];
+        return picture_url;
+
+
+
+    });
+
+
+
+
+}
+
+
 
