@@ -36,7 +36,7 @@ async function init() {
 
         //badges from badge url
 
-        const badgeTags = await renderContributing(contributor);]
+        const badgeTags = await renderContributing(contributor);
 
         //this is for the axios call
         
