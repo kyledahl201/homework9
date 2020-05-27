@@ -267,5 +267,89 @@ return axios
 
 }
 
+// this function will generate our whole template from user data
 
+function generateTemplate(fullName, username, title, shortDescription, longDescription, screenshotUrl, installationList, usageList, creditList, license, testList, badgeTags, contributingCopy, avatarUrl, year) {
+
+        return `
+        
+        
+        
+        # ${title}   ${badgeTags}  
+> ${shortDescription}    
+
+
+## Description  
+${longDescription}  
+
+![Screenshot](${screenshotUrl})  
+
+
+## Table of Contents  
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+
+## Installation  
+${installationList}
+
+
+## Usage  
+${usageList}
+
+
+## Credits  
+${creditList}
+
+
+## License  
+    This project is licensed under the terms of the ${license}.
+
+
+## Contributing  
+${contributingCopy}
+
+
+## Tests  
+${testList}
+
+
+## Questions
+You may address any questions to the author listed below:  
+
+Name: __${fullName}__  
+GitHub: [${username}](https://github.com/${username})  
+![Image of Me](${picture_url})
+
+
+---
+© ${year} ${fullName}. All Rights Reserved.
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        `
+
+
+}
 
