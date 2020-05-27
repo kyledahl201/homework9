@@ -223,3 +223,25 @@ function renderBadges(badge) {
 
 
 }
+
+
+//create function to render list layout
+
+function createList(responseList, type) {
+
+        const responseArray = responseList.split(",");
+        let responseTemplate = "";
+        
+        if (type === "ordered") {
+                for (let i = 0; i < responseArray.length; i++) {
+                    responseTemplate += "*" + responseArray[i] + "\n";
+                }
+
+
+        }
+
+        return responseTemplate;
+
+}
+
+
